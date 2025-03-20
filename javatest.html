@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Java Plugin Check</title>
+</head>
+<body>
+    <h1>Java Plugin Check</h1>
+    <p id="status">Checking...</p>
+
+    <script>
+        function checkJava() {
+            let javaEnabled = navigator.javaEnabled();
+            const statusElement = document.getElementById("status");
+
+            if (javaEnabled) {
+                statusElement.innerHTML = "✅ Java is enabled in your browser.";
+            } else {
+                statusElement.innerHTML = "❌ Java is not enabled or supported in your browser.";
+            }
+        }
+
+        window.onload = checkJava;
+    </script>
+</body>
+</html>
